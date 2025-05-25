@@ -31,7 +31,9 @@ header {
     font-family: 'Playfair Display', serif;
 }
 .logo img {
-    margin-right: 12px;
+     height: 60px;     /* Ajusta el tamaño del logo gráfico */
+    width: auto;
+    margin-right: 18px;
 }
 .nav-links {
     list-style: none;
@@ -166,8 +168,11 @@ main section {
     transition: transform 0.17s;
 }
 .service-card img {
-    width: 52px;
+    width: 90px;         /* Elige el tamaño que desees, por ejemplo 90px */
+    height: 90px;        /* Asegura el alto */
+    object-fit: cover;   /* Recorta la imagen para que llene el espacio */
     margin-bottom: 0.7em;
+    border-radius: 12px; /* Opcional: bordes redondeados */
 }
 .service-card h3 {
     margin: 0.4em 0 0.6em 0;
