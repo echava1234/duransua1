@@ -168,8 +168,8 @@ main section {
     transition: transform 0.17s;
 }
 .service-block img {
-  width: 20px;
-  height: 20px;
+  width: 5px;
+  height: 5px;
   object-fit: contain;
   display: block;
   margin: 0 auto 0.6em auto;
