@@ -378,6 +378,12 @@ footer {
 .footer-links li a:hover {
     text-decoration: underline;
 }
+.footer-img {
+    width: 110px;       /* Ajusta el ancho deseado */
+    height: 110px;      /* Ajusta el alto deseado */
+    object-fit: cover;  /* Recorta la imagen para que ocupe todo el espacio */
+    border-radius: 10px; /* Opcional, bordes redondeados */
+}
 
 /* FORMULARIO DE CONTACTO */
 form#contact-form {
