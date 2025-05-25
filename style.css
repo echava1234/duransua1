@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Playfair Display', 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: #fafcff;
@@ -26,6 +26,7 @@ header {
     font-size: 1.45em;
     font-weight: 700;
     letter-spacing: 1px;
+    font-family: 'Playfair Display', serif;
 }
 .logo img {
     margin-right: 12px;
@@ -46,6 +47,7 @@ header {
     transition: border-bottom 0.2s, color 0.2s;
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .nav-links a:hover,
 .nav-links a.active {
@@ -60,13 +62,16 @@ header {
     padding: 4em 1.5em 3em 1.5em;
 }
 .hero-content h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 2.7em;
     margin-bottom: 0.5em;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 .hero-content p {
     font-size: 1.35em;
     margin-bottom: 1.4em;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .btn-hero {
     background: #ffd43b;
@@ -78,6 +83,7 @@ header {
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
     border: none;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .btn-hero:hover {
     background: #fff;
@@ -103,6 +109,7 @@ main section {
 }
 .about-brief h2 {
     margin-bottom: 0.4em;
+    font-family: 'Playfair Display', serif;
 }
 .btn-secondary {
     background: #23408e;
@@ -114,6 +121,7 @@ main section {
     margin-top: 1em;
     display: inline-block;
     transition: background 0.2s, color 0.2s;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .btn-secondary:hover {
     background: #ffd43b;
@@ -126,6 +134,7 @@ main section {
 }
 .services-brief h2 {
     margin-bottom: 1em;
+    font-family: 'Playfair Display', serif;
 }
 .services-grid {
     display: flex;
@@ -152,10 +161,12 @@ main section {
     color: #23408e;
     font-size: 1.08em;
     font-weight: 700;
+    font-family: 'Playfair Display', serif;
 }
 .service-card p {
     font-size: 0.98em;
     color: #444;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .service-card:hover {
     transform: translateY(-7px) scale(1.05);
@@ -175,10 +186,12 @@ main section {
 .highlight-contact h2 {
     font-size: 1.8em;
     margin-bottom: 0.3em;
+    font-family: 'Playfair Display', serif;
 }
 .highlight-contact p {
     font-size: 1.13em;
     margin-bottom: 1.1em;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .btn-cta {
     background: #ffd43b;
@@ -189,6 +202,7 @@ main section {
     text-decoration: none;
     display: inline-block;
     transition: background 0.16s, color 0.16s;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .btn-cta:hover {
     background: #fff;
@@ -202,6 +216,7 @@ main section {
 }
 .team-section h2 {
     margin-bottom: 1.2em;
+    font-family: 'Playfair Display', serif;
 }
 .team-list {
     display: flex;
@@ -232,16 +247,19 @@ main section {
     color: #23408e;
     font-size: 1.09em;
     font-weight: 700;
+    font-family: 'Playfair Display', serif;
 }
 .team-member p {
     font-size: 0.98em;
     color: #4b4b4b;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .mini-info {
     display: block;
     font-size: 0.91em;
     color: #23408e;
     margin-top: 0.2em;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .testimonials-section {
@@ -251,6 +269,7 @@ main section {
 }
 .testimonials-section h2 {
     margin-bottom: 1.2em;
+    font-family: 'Playfair Display', serif;
 }
 .testimonials-list {
     display: flex;
@@ -269,6 +288,7 @@ main section {
     margin-bottom: 1em;
     border-left: 4px solid #ffd43b;
     position: relative;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .testimonial:before {
     content: "“";
@@ -277,6 +297,7 @@ main section {
     position: absolute;
     top: -0.5em;
     left: 10px;
+    font-family: 'Playfair Display', serif;
 }
 .testimonial span {
     display: block;
@@ -284,6 +305,7 @@ main section {
     font-weight: 600;
     color: #23408e;
     font-size: 0.97em;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .quick-contact-section {
@@ -297,6 +319,7 @@ main section {
 }
 .quick-contact-section h2 {
     margin-bottom: 0.7em;
+    font-family: 'Playfair Display', serif;
 }
 .quick-contact-info {
     display: flex;
@@ -305,6 +328,7 @@ main section {
     justify-content: center;
     font-size: 1.12em;
     margin-bottom: 1em;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .quick-contact-info div {
     margin: 0.15em 0.7em;
@@ -339,6 +363,7 @@ footer {
     font-weight: 500;
     font-size: 1em;
     transition: text-decoration 0.1s;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .footer-links li a:hover {
     text-decoration: underline;
@@ -372,3 +397,6 @@ footer {
         font-size: 1.2em;
     }
 }
+
+/* Importar la fuente elegante */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap');
