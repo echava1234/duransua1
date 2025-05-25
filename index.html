@@ -6,69 +6,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Servicios de asesoría contable, fiscal y empresarial. Atención personalizada en Medellín, Colombia.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="logo">
-                <h1>DURANSUA SAS</h1>
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="DURANSUA logo" width="45" style="vertical-align:middle;">
+                <span>DURANSUA SAS</span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
                 <li><a href="contacto.html">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
-            <h2>Soluciones contables y fiscales a tu medida</h2>
-            <p>
-                Brindamos asesoría personalizada para empresas y personas naturales. <br>
-                ¡Confía en nuestra experiencia y profesionalismo!
-            </p>
-            <a href="contacto.html" class="btn-hero">Contáctanos</a>
+            <div class="hero-content">
+                <h1>Soluciones contables y fiscales a tu medida</h1>
+                <p>
+                    Brindamos asesoría personalizada para empresas y personas naturales.<br>
+                    ¡Confía en nuestra experiencia y profesionalismo!
+                </p>
+                <a href="contacto.html" class="btn-hero">Contáctanos</a>
+            </div>
         </section>
 
-        <section class="about-brief" id="about-brief">
-            <h2>¿Quiénes somos?</h2>
-            <p>
-                Somos una firma de contadores públicos con amplia experiencia en el sector empresarial y fiscal, comprometidos con la excelencia, la ética y la confidencialidad.
-            </p>
-            <a href="sobre-nosotros.html" class="btn-secondary">Conócenos más</a>
+        <section class="about-brief">
+            <div class="about-brief-content">
+                <h2>¿Quiénes somos?</h2>
+                <p>
+                    Somos una firma de contadores públicos con amplia experiencia en el sector empresarial y fiscal, comprometidos con la excelencia, la ética y la confidencialidad.<br>
+                    Nuestro equipo trabaja para brindarte soluciones integrales, seguras y a la medida de tus necesidades.
+                </p>
+                <a href="sobreNosotros.html" class="btn-secondary">Conócenos más</a>
+            </div>
         </section>
 
-        <section class="services-brief" id="services-brief">
+        <section class="services-brief">
             <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Contabilidad general y financiera</li>
-                <li>Declaración de renta y obligaciones fiscales</li>
-                <li>Asesoría tributaria y empresarial</li>
-                <li>Nómina y seguridad social</li>
-                <li>Creación y gestión de empresas</li>
-            </ul>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Contabilidad">
+                    <h3>Contabilidad integral</h3>
+                    <p>Gestión contable y financiera para empresas y personas naturales.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2936/2936887.png" alt="Impuestos">
+                    <h3>Declaración de impuestos</h3>
+                    <p>Preparación y presentación de impuestos nacionales y municipales.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Asesoría">
+                    <h3>Asesoría empresarial</h3>
+                    <p>Orientación tributaria, laboral y administrativa para tu negocio.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Nómina">
+                    <h3>Gestión de nómina</h3>
+                    <p>Manejo de nómina, prestaciones sociales y seguridad social.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1907/1907367.png" alt="Creación de empresas">
+                    <h3>Creación de empresas</h3>
+                    <p>Acompañamiento en la constitución y formalización de sociedades.</p>
+                </div>
+            </div>
             <a href="servicios.html" class="btn-secondary">Ver todos los servicios</a>
         </section>
 
-        <section class="highlight-contact" id="highlight-contact">
+        <section class="highlight-contact">
             <h2>¿Listo para optimizar tu contabilidad?</h2>
             <p>Estamos para ayudarte. ¡Agenda tu cita o consulta sin costo!</p>
             <a href="contacto.html" class="btn-cta">Contacto rápido</a>
         </section>
-    </main>
 
+        <section class="team-section">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-list">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Armando Antonio Durango">
+                    <h4>Armando Antonio Durango Guarín</h4>
+                    <p>Gerente y Contador General<br>
+                        <span class="mini-info">C.C. 71.624.647<br>
+                        Fundador, especialista en asesoría empresarial, gestión contable y fiscal, con amplia experiencia en dirección administrativa y gestión de sociedades.</span>
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Melissa Durango Gómez">
+                    <h4>Melissa Durango Gómez</h4>
+                    <p>Subgerente y Asistente Contable<br>
+                        <span class="mini-info">C.C. 1.017.175.025<br>
+                        Encargada de procesos administrativos, nómina, atención al cliente y soporte operativo en temas contables y fiscales.</span>
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Equipo DURANSUA">
+                    <h4>Equipo Auxiliar</h4>
+                    <p>Auxiliares contables y administrativos<br>
+                        <span class="mini-info">Soporte en digitación, manejo documental, facturación, mensajería y trámites ante entidades públicas y privadas.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-list">
+                <div class="testimonial">
+                    <p>"Desde que trabajo con DURANSUA SAS, mi empresa ha mejorado su gestión contable y tributaria. Son responsables y siempre están atentos a mis necesidades."</p>
+                    <span>- Carlos M., Empresario</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Excelente servicio y atención personalizada. Me ayudaron a constituir mi empresa y a mantener todo en regla."</p>
+                    <span>- Andrea T., Emprendedora</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Recomiendo a DURANSUA SAS por su ética y profesionalismo. Siempre resuelven mis dudas y me orientan de la mejor manera."</p>
+                    <span>- Luis F., Independiente</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-contact-section">
+            <h2>Contáctanos</h2>
+            <div class="quick-contact-info">
+                <div>
+                    <b>Teléfonos:</b> 6042394610 - 3174326996 - 3165281760
+                </div>
+                <div>
+                    <b>Email:</b> duransuasas@gmail.com
+                </div>
+                <div>
+                    <b>Ubicación:</b> Medellín, Colombia
+                </div>
+            </div>
+            <a href="contacto.html" class="btn-cta">Escríbenos</a>
+        </section>
+    </main>
     <footer>
         <div class="footer-content">
-            <p>
+            <div>
                 &copy; 2025 DURANSUA SAS. Todos los derechos reservados.<br>
-                Medellín, Colombia | Tel: 6042394610 - 3174326996 - 3165281760 | 
-                Email: duransuasas@gmail.com
-            </p>
+                Medellín, Colombia
+            </div>
             <ul class="footer-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
                 <li><a href="contacto.html">Contáctanos</a></li>
             </ul>
         </div>
