@@ -1,3 +1,4 @@
+```css name=style.css
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap');
 
 html, body {
@@ -36,7 +37,7 @@ html, body {
 }
 .logo img {
   margin-right: 10px;
-  width: 120px;    /* LOGO MÁS GRANDE */
+  width: 80px !important;   /* Ajuste: logo más grande */
   height: auto;
 }
 header nav ul {
@@ -94,7 +95,7 @@ header nav ul li a:hover {
   margin-bottom: 1.3em;
 }
 .cta-glass {
-  background: #3c3b6e;
+  background: #3c3b6e;      /* Fondo más visible */
   color: #ffd43b;
   border: 2px solid #ffd43b;
   border-radius: 26px;
@@ -114,9 +115,7 @@ header nav ul li a:hover {
 .hero-img {
   flex: 1 1 43%;
   border-radius: 22px;
-  max-width: 450px;    /* IMAGEN MÁS GRANDE */
-  min-width: 320px;
-  width: 100%;
+  max-width: 310px;
   margin-left: 2.2em;
   box-shadow: 0 2px 24px #3c3b6e22;
   display: block;
@@ -195,11 +194,8 @@ header nav ul li a:hover {
   position: relative;
 }
 .service-block img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 0.6em auto;
+  width: 50px;
+  margin-bottom: .6em;
 }
 .service-block h3 {
   font-family: 'Poppins', Arial, sans-serif;
@@ -370,9 +366,9 @@ header nav ul li a:hover {
 }
 
 .galeria-grid img {
-  width: 270px;     /* MÁS GRANDE Y UNIFORME */
-  height: 180px;
-  object-fit: cover;
+  width: 200px;         /* MISMO ancho para todas */
+  height: 140px;        /* MISMA altura para todas */
+  object-fit: cover;    /* Recorta y centra la imagen */
   border-radius: 11px;
   box-shadow: 0 2px 8px #bfc8e644;
   transition: transform 0.18s, box-shadow 0.18s;
@@ -393,9 +389,9 @@ header nav ul li a:hover {
     gap: 0.8em;
   }
   .galeria-grid img {
-    width: 98vw;
-    max-width: 430px;
-    height: 150px;
+    width: 90vw;
+    max-width: 350px;
+    height: 120px;
   }
 }
 
@@ -516,13 +512,6 @@ form#contact-form button[type="submit"] {
   }
 }
 
-@media (max-width: 700px) {
-  .service-block img {
-    width: 60px;
-    height: 60px;
-  }
-}
-
 @media (max-width: 600px) {
   .header-flex, .footer-flex, .about-cards, .cards-row, .services-grid-alt, .team-flex, .testi-cards {
     padding: 0.7em 0.3em;
@@ -534,3 +523,4 @@ form#contact-form button[type="submit"] {
     font-size: 1.1em;
   }
 }
+```
