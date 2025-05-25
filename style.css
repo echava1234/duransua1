@@ -1,17 +1,29 @@
+:root {
+    --primary-color: #23408e;
+    --secondary-color: #ffd43b;
+    --background-color: #fafcff;
+    --text-color: #252525;
+    --light-background: #f9fbfd;
+    --dark-background: #1e326d;
+    --shadow-color: rgba(35, 64, 142, 0.07);
+}
+
 body {
-    font-family: 'Playfair Display', 'Montserrat', Arial, sans-serif;
+    font-family: 'Lora', serif;
     margin: 0;
     padding: 0;
-    background: #fafcff;
-    color: #252525;
+    background: var(--background-color);
+    color: var(--text-color);
 }
+
 header {
-    background: #23408e;
+    background: var(--primary-color);
     color: #fff;
     position: sticky;
     top: 0;
     z-index: 10;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,6 +32,7 @@ header {
     margin: 0 auto;
     padding: 0.6em 1.5em;
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -28,345 +41,77 @@ header {
     letter-spacing: 1px;
     font-family: 'Playfair Display', serif;
 }
-.logo img {
-    margin-right: 12px;
-}
+
 .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
-.nav-links li {
-    margin: 0 1em;
-}
+
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: border-bottom 0.2s, color 0.2s;
+    transition: color 0.2s, border-bottom 0.2s;
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
-    font-family: 'Montserrat', Arial, sans-serif;
 }
+
 .nav-links a:hover,
 .nav-links a.active {
-    color: #ffd43b;
-    border-bottom: 2px solid #ffd43b;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* TITULOS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 .hero {
-    background: linear-gradient(120deg, #23408e 60%, #5abbf7 100%);
+    background: linear-gradient(120deg, var(--primary-color) 60%, #5abbf7 100%);
     color: #fff;
     text-align: center;
-    padding: 4em 1.5em 3em 1.5em;
+    padding: 4em 1.5em 3em;
 }
-.hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.7em;
-    margin-bottom: 0.5em;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-.hero-content p {
-    font-size: 1.35em;
-    margin-bottom: 1.4em;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
+
 .btn-hero {
-    background: #ffd43b;
-    color: #23408e;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     padding: 0.9em 2.2em;
     border-radius: 28px;
     font-weight: 700;
     font-size: 1.12em;
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
-    border: none;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-.btn-hero:hover {
-    background: #fff;
-    color: #23408e;
-}
-main section {
-    max-width: 1100px;
-    margin: 0 auto 2.7em auto;
-    padding: 2em 1.5em 1em 1.5em;
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 1px 8px rgba(35, 64, 142, 0.07);
-}
-.about-brief {
-    background: #f4f7fb;
-    margin-top: -2.5em;
-    margin-bottom: 2em;
-}
-.about-brief-content {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-}
-.about-brief h2 {
-    margin-bottom: 0.4em;
-    font-family: 'Playfair Display', serif;
-}
-.btn-secondary {
-    background: #23408e;
-    color: #fff;
-    padding: 0.6em 1.7em;
-    border-radius: 22px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 1em;
-    display: inline-block;
-    transition: background 0.2s, color 0.2s;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-.btn-secondary:hover {
-    background: #ffd43b;
-    color: #23408e;
 }
 
+.btn-hero:hover {
+    background: #fff;
+    color: var(--primary-color);
+}
+
+/* Sección de Servicios */
 .services-brief {
-    background: #f9fbfd;
+    background: var(--light-background);
     text-align: center;
 }
-.services-brief h2 {
-    margin-bottom: 1em;
-    font-family: 'Playfair Display', serif;
-}
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5em;
-    margin-bottom: 1em;
-}
+
 .service-card {
     width: 200px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(35, 64, 142, 0.08);
-    padding: 1.3em 1em 1em 1em;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    padding: 1.3em;
     text-align: center;
-    transition: transform 0.17s;
+    transition: transform 0.17s, box-shadow 0.17s;
 }
-.service-card img {
-    width: 52px;
-    margin-bottom: 0.7em;
-}
-.service-card h3 {
-    margin: 0.4em 0 0.6em 0;
-    color: #23408e;
-    font-size: 1.08em;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-}
-.service-card p {
-    font-size: 0.98em;
-    color: #444;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
+
 .service-card:hover {
     transform: translateY(-7px) scale(1.05);
     box-shadow: 0 4px 15px rgba(35, 64, 142, 0.15);
-}
-
-.highlight-contact {
-    background: linear-gradient(90deg, #23408e 65%, #5abbf7 100%);
-    color: #fff;
-    text-align: center;
-    margin-bottom: 1.5em;
-    margin-top: 2em;
-    padding: 2.5em 1em 2em 1em;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(35, 64, 142, 0.08);
-}
-.highlight-contact h2 {
-    font-size: 1.8em;
-    margin-bottom: 0.3em;
-    font-family: 'Playfair Display', serif;
-}
-.highlight-contact p {
-    font-size: 1.13em;
-    margin-bottom: 1.1em;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-.btn-cta {
-    background: #ffd43b;
-    color: #23408e;
-    padding: 0.8em 2em;
-    border-radius: 24px;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.16s, color 0.16s;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-.btn-cta:hover {
-    background: #fff;
-    color: #23408e;
-}
-
-.team-section {
-    background: #f4f7fb;
-    text-align: center;
-    margin-top: 2em;
-}
-.team-section h2 {
-    margin-bottom: 1.2em;
-    font-family: 'Playfair Display', serif;
-}
-.team-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.2em;
-}
-.team-member {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(35, 64, 142, 0.08);
-    width: 250px;
-    padding: 1.2em 1em 1em 1em;
-    margin-bottom: 1.3em;
-    transition: transform 0.17s;
-}
-.team-member:hover {
-    transform: translateY(-7px) scale(1.05);
-}
-.team-member img {
-    width: 75px;
-    border-radius: 50%;
-    margin-bottom: 0.7em;
-    border: 3px solid #23408e22;
-}
-.team-member h4 {
-    margin: 0.4em 0 0.3em 0;
-    color: #23408e;
-    font-size: 1.09em;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-}
-.team-member p {
-    font-size: 0.98em;
-    color: #4b4b4b;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-.mini-info {
-    display: block;
-    font-size: 0.91em;
-    color: #23408e;
-    margin-top: 0.2em;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-
-.testimonials-section {
-    background: #f9fbfd;
-    text-align: center;
-    margin-top: 2em;
-}
-.testimonials-section h2 {
-    margin-bottom: 1.2em;
-    font-family: 'Playfair Display', serif;
-}
-.testimonials-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    justify-content: center;
-}
-.testimonial {
-    background: #fff;
-    border-radius: 10px;
-    padding: 1.3em 1.4em;
-    box-shadow: 0 1px 5px rgba(35, 64, 142, 0.06);
-    max-width: 340px;
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 1em;
-    border-left: 4px solid #ffd43b;
-    position: relative;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-.testimonial:before {
-    content: "“";
-    font-size: 2.5em;
-    color: #ffd43b;
-    position: absolute;
-    top: -0.5em;
-    left: 10px;
-    font-family: 'Playfair Display', serif;
-}
-.testimonial span {
-    display: block;
-    margin-top: 0.8em;
-    font-weight: 600;
-    color: #23408e;
-    font-size: 0.97em;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-
-.quick-contact-section {
-    background: #23408e;
-    color: #fff;
-    text-align: center;
-    margin-top: 2.2em;
-    margin-bottom: 2em;
-    border-radius: 14px;
-    padding: 2em 1em 1.4em 1em;
-}
-.quick-contact-section h2 {
-    margin-bottom: 0.7em;
-    font-family: 'Playfair Display', serif;
-}
-.quick-contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.2em;
-    justify-content: center;
-    font-size: 1.12em;
-    margin-bottom: 1em;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-.quick-contact-info div {
-    margin: 0.15em 0.7em;
-}
-
-footer {
-    background: #1e326d;
-    color: #fff;
-    text-align: center;
-    padding: 1.5em 1em 1em 1em;
-    margin-top: 2.5em;
-}
-.footer-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-}
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1.2em;
-}
-.footer-links li a {
-    color: #ffd43b;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1em;
-    transition: text-decoration 0.1s;
-    font-family: 'Montserrat', Arial, sans-serif;
-}
-.footer-links li a:hover {
-    text-decoration: underline;
 }
 
 /* Responsivo */
@@ -375,28 +120,9 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-    .services-grid, .team-list, .testimonials-list, .quick-contact-info {
-        flex-direction: column;
-        gap: 1em;
-    }
-    .service-card, .team-member, .testimonial {
+    .service-card {
         width: 100%;
         max-width: 350px;
-        margin: 0 auto 1em auto;
+        margin: 0 auto 1em;
     }
 }
-
-@media (max-width: 600px) {
-    .navbar, .footer-content, .about-brief-content {
-        padding: 0.7em 0.3em;
-    }
-    .hero-content h1 {
-        font-size: 1.5em;
-    }
-    .highlight-contact h2, .team-section h2, .services-brief h2, .testimonials-section h2, .quick-contact-section h2 {
-        font-size: 1.2em;
-    }
-}
-
-/* Importar la fuente elegante */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap');
