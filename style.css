@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap');
+
 body {
-    font-family: 'Playfair Display', 'Montserrat', Arial, sans-serif;
+    font-family: 'Lora', serif;
     margin: 0;
     padding: 0;
     background: #fafcff;
@@ -55,6 +57,12 @@ header {
     border-bottom: 2px solid #ffd43b;
 }
 
+/* TITULOS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
 .hero {
     background: linear-gradient(120deg, #23408e 60%, #5abbf7 100%);
     color: #fff;
@@ -62,7 +70,6 @@ header {
     padding: 4em 1.5em 3em 1.5em;
 }
 .hero-content h1 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.7em;
     margin-bottom: 0.5em;
     font-weight: 700;
@@ -71,7 +78,7 @@ header {
 .hero-content p {
     font-size: 1.35em;
     margin-bottom: 1.4em;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Lora', serif;
 }
 .btn-hero {
     background: #ffd43b;
@@ -109,7 +116,9 @@ main section {
 }
 .about-brief h2 {
     margin-bottom: 0.4em;
-    font-family: 'Playfair Display', serif;
+}
+.about-brief p {
+    font-family: 'Lora', serif;
 }
 .btn-secondary {
     background: #23408e;
@@ -134,7 +143,11 @@ main section {
 }
 .services-brief h2 {
     margin-bottom: 1em;
-    font-family: 'Playfair Display', serif;
+}
+.services-brief ul,
+.services-brief p,
+.service-card p {
+    font-family: 'Lora', serif;
 }
 .services-grid {
     display: flex;
@@ -161,12 +174,10 @@ main section {
     color: #23408e;
     font-size: 1.08em;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
 }
 .service-card p {
     font-size: 0.98em;
     color: #444;
-    font-family: 'Montserrat', Arial, sans-serif;
 }
 .service-card:hover {
     transform: translateY(-7px) scale(1.05);
@@ -186,12 +197,11 @@ main section {
 .highlight-contact h2 {
     font-size: 1.8em;
     margin-bottom: 0.3em;
-    font-family: 'Playfair Display', serif;
 }
 .highlight-contact p {
     font-size: 1.13em;
     margin-bottom: 1.1em;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Lora', serif;
 }
 .btn-cta {
     background: #ffd43b;
@@ -216,7 +226,6 @@ main section {
 }
 .team-section h2 {
     margin-bottom: 1.2em;
-    font-family: 'Playfair Display', serif;
 }
 .team-list {
     display: flex;
@@ -247,19 +256,17 @@ main section {
     color: #23408e;
     font-size: 1.09em;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
 }
 .team-member p {
     font-size: 0.98em;
     color: #4b4b4b;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Lora', serif;
 }
 .mini-info {
     display: block;
     font-size: 0.91em;
     color: #23408e;
     margin-top: 0.2em;
-    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .testimonials-section {
@@ -269,7 +276,6 @@ main section {
 }
 .testimonials-section h2 {
     margin-bottom: 1.2em;
-    font-family: 'Playfair Display', serif;
 }
 .testimonials-list {
     display: flex;
@@ -288,7 +294,7 @@ main section {
     margin-bottom: 1em;
     border-left: 4px solid #ffd43b;
     position: relative;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Lora', serif;
 }
 .testimonial:before {
     content: "“";
@@ -319,7 +325,6 @@ main section {
 }
 .quick-contact-section h2 {
     margin-bottom: 0.7em;
-    font-family: 'Playfair Display', serif;
 }
 .quick-contact-info {
     display: flex;
@@ -328,7 +333,7 @@ main section {
     justify-content: center;
     font-size: 1.12em;
     margin-bottom: 1em;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Lora', serif;
 }
 .quick-contact-info div {
     margin: 0.15em 0.7em;
@@ -369,6 +374,52 @@ footer {
     text-decoration: underline;
 }
 
+/* FORMULARIO DE CONTACTO */
+form#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    max-width: 480px;
+    margin: 2em auto 0 auto;
+    background: #f9fbfd;
+    padding: 2.2em 2em 2em 2em;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(35, 64, 142, 0.08);
+}
+form#contact-form input,
+form#contact-form textarea {
+    font-family: 'Lora', serif;
+    font-size: 1.15em;
+    padding: 1.1em 1.2em;
+    border-radius: 14px;
+    border: 1.5px solid #c3d5f7;
+    background: #fff;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    margin-bottom: 0.2em;
+}
+form#contact-form input:focus,
+form#contact-form textarea:focus {
+    border: 1.5px solid #23408e;
+    box-shadow: 0 0 0 2px #a2c0fa44;
+}
+form#contact-form textarea {
+    min-height: 110px;
+}
+form#contact-form button[type="submit"] {
+    margin-top: 0.6em;
+}
+
+.form-message {
+    text-align: center;
+    color: #23408e;
+    font-weight: 600;
+    margin-top: 1.5em;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
 /* Responsivo */
 @media (max-width: 990px) {
     .navbar, .footer-content, main section {
@@ -384,6 +435,10 @@ footer {
         max-width: 350px;
         margin: 0 auto 1em auto;
     }
+    form#contact-form {
+        max-width: 98vw;
+        padding: 1.1em 0.7em;
+    }
 }
 
 @media (max-width: 600px) {
@@ -397,6 +452,3 @@ footer {
         font-size: 1.2em;
     }
 }
-
-/* Importar la fuente elegante */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap');
