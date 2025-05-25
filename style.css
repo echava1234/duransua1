@@ -1,4 +1,4 @@
-/* Reseteo básico para consistencia entre navegadores */
+/* Reseteo básico */
 * {
     margin: 0;
     padding: 0;
@@ -7,162 +7,78 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
     background-color: #000; /* Fondo negro */
     color: #FFD700; /* Texto dorado */
-    margin: 0;
-    padding: 0;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    overflow-y: hidden; /* Oculta el desplazamiento vertical */
+    height: 100vh; /* Altura completa de la pantalla */
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
-/* Contenedor principal */
-.container {
-    display: grid; /* Diseño de cuadrícula */
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    gap: 20px; /* Espacio entre elementos */
-    width: 90%; /* Ancho del contenedor */
-    margin: 20px 0;
-    padding: 20px;
-    background: #111; /* Fondo oscuro */
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
-}
-
-/* Encabezado */
-header {
-    grid-column: span 3; /* Ocupa las tres columnas */
-    background: #FFD700; /* Fondo dorado */
-    color: #000; /* Texto negro */
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-/* Navegación horizontal */
-nav {
-    grid-column: span 3; /* Ocupa toda la fila */
+/* Contenedor principal para el scroll horizontal */
+.horizontal-scroll {
     display: flex;
-    justify-content: center;
-    background: #222;
-    padding: 10px;
-    border-radius: 8px;
+    flex-direction: row; /* Contenido en fila */
+    height: 100vh; /* Altura igual a la vista */
+    width: max-content; /* Ancho dinámico según los elementos */
 }
 
-nav a {
-    color: #FFD700;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-    background: #FFD700;
-    color: #000;
-    border-radius: 5px;
-    transform: scale(1.1);
-}
-
-/* Sección principal */
-main {
-    grid-column: span 2; /* Ocupa dos columnas */
+/* Secciones horizontales */
+.section {
+    flex: 0 0 100vw; /* Cada sección ocupa el ancho completo de la pantalla */
+    height: 100vh; /* Cada sección ocupa toda la altura */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    background-color: #111;
-    border-radius: 8px;
-}
-
-main h2 {
-    color: #FFD700;
-    margin-bottom: 10px;
-}
-
-/* Cuadros de párrafos */
-main p {
-    padding: 15px;
-    border: 1px solid #FFD700; /* Borde dorado */
-    border-radius: 5px;
-    background: #222;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-main p:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.4);
-}
-
-/* Sidebar */
-aside {
-    grid-column: span 1; /* Ocupa una columna */
-    background: #111;
-    padding: 15px;
-    border: 2px solid #FFD700;
-    border-radius: 8px;
+    background: #111; /* Fondo oscuro para las secciones */
+    border-right: 2px solid #FFD700; /* Separador dorado */
     text-align: center;
 }
 
-aside h3 {
-    color: #FFD700;
-    margin-bottom: 10px;
+.section.header {
+    background: #FFD700; /* Fondo dorado para la cabecera */
+    color: #000; /* Texto negro */
 }
 
-/* Imágenes con tamaño uniforme */
+.section.footer {
+    background: #222; /* Fondo más oscuro para el pie de página */
+}
+
+/* Estilo de imágenes */
 img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border: 2px solid #FFD700;
-    border-radius: 8px;
-    margin: 10px;
+    border: 2px solid #FFD700; /* Bordes dorados */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 10px;
     transition: transform 0.3s ease;
 }
 
 img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Efecto de zoom al pasar el ratón */
 }
 
-/* Footer */
-footer {
-    grid-column: span 3; /* Ocupa las tres columnas */
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    background: #222;
-    color: #FFD700;
-    border-radius: 8px;
+/* Estilo de textos */
+h1, h2 {
+    margin: 10px 0;
 }
 
-/* Botones interactivos */
-button {
-    background: #FFD700;
-    color: #000;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background: #000;
-    color: #FFD700;
-    transform: scale(1.1);
+p {
+    max-width: 600px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-        gap: 10px;
+    p {
+        font-size: 1rem;
     }
 
     img {
