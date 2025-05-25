@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary: #1e88e5;
+    --secondary: #e3f2fd;
+    --accent: #00bfae;
+    --dark: #222;
+    --light: #fff;
+    --grey: #f4f4f4;
+    --shadow: 0 4px 12px rgba(30,136,229,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--grey);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+header {
+    background: var(--light);
+    box-shadow: var(--shadow);
+    padding: 1.2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    margin-right: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+}
+
+nav {
+    margin-right: 2rem;
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, var(--secondary) 60%, var(--accent) 100%);
+    padding: 4rem 2rem 3rem 2rem;
+    min-height: 450px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn-cta {
+    background: var(--primary);
+    color: var(--light);
+    padding: 0.9rem 2.2rem;
+    border-radius: 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: background 0.2s;
+}
+
+.btn-cta:hover {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.hero-image img {
+    max-width: 320px;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+.services {
+    padding: 3rem 2rem;
+    background: var(--light);
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary);
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--secondary);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 2rem 1.2rem;
+    width: 270px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(30,136,229,0.17);
+}
+
+.service-card img {
+    width: 55px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+}
+
+.about {
+    padding: 3rem 2rem;
+    background: var(--grey);
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.about-content div {
+    flex: 1 1 360px;
+    max-width: 500px;
+}
+
+.about-image img {
+    border-radius: 18px;
+    max-width: 320px;
+    box-shadow: var(--shadow);
+}
+
+.about-content ul {
+    margin-top: 1.2rem;
+    padding-left: 2rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.contact {
+    background: var(--light);
+    padding: 3rem 2rem;
+}
+
+.contact h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    border: 1.5px solid var(--secondary);
+    font-size: 1rem;
+    background: var(--grey);
+    outline: none;
+    transition: border 0.2s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border: 1.5px solid var(--primary);
+}
+
+#contact-form button {
+    background: var(--accent);
+    color: var(--light);
+    padding: 0.9rem;
+    border: none;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+}
+
+#contact-form button:hover {
+    background: var(--primary);
+}
+
+.form-message {
+    margin-top: 1.2rem;
+    color: var(--primary);
+    text-align: center;
+    font-weight: bold;
+}
+
+.team-section {
+    margin: 3rem auto 0 auto;
+    max-width: 700px;
+    background: var(--secondary);
+    border-radius: 16px;
+    padding: 2rem 1.3rem;
+    box-shadow: var(--shadow);
+}
+
+.team-section h3 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1.7rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    background: var(--light);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    min-width: 220px;
+    max-width: 300px;
+    gap: 1.2rem;
+}
+
+.team-member img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2.5px solid var(--primary);
+}
+
+.team-member h4 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.team-member p {
+    margin: 0;
+    font-size: 0.97rem;
+    color: var(--dark);
+}
+
+.mini-info {
+    font-size: 0.89rem;
+    color: #555;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .services-list, .promo-grid, .team-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-member {
+        width: 95%;
+    }
+}
