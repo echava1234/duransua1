@@ -115,6 +115,13 @@ header.scrolled nav a.active {
   margin-left: auto;
   margin-right: auto;
   text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+
+  /* Paragraph box */
+  border: 2px solid rgba(255 255 255 / 0.5);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background: rgba(255 255 255 / 0.15);
+  box-shadow: 0 0 10px rgba(255 255 255 / 0.3);
 }
 
 /* Button in hero section */
@@ -163,12 +170,19 @@ header.scrolled nav a.active {
   text-align: center;
 }
 
+/* Paragraph box style in features intro */
 #features p.intro {
   text-align: center;
   max-width: 640px;
   margin: 0 auto 3rem;
   font-size: 1.1rem;
   color: #3a4b66;
+
+  border: 2px solid #6470ff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background: #f0f4ff;
+  box-shadow: 0 0 10px rgb(100 112 255 / 0.25);
 }
 
 .feature-list {
@@ -194,21 +208,24 @@ header.scrolled nav a.active {
   box-shadow: 0 10px 35px rgb(64 87 255 / 0.25);
 }
 
+/* Uniform images with border */
 .feature-card img {
   width: 280px;
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
+  border: 2px solid #6470ff;
   box-shadow: 0 4px 20px rgb(64 87 255 / 0.18);
   margin-bottom: 1rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .feature-card img:hover {
   transform: scale(1.07);
+  border-color: #4057ff;
 }
 
 .feature-card h3 {
@@ -224,6 +241,14 @@ header.scrolled nav a.active {
   color: #444c56;
   text-align: center;
   line-height: 1.4;
+
+  /* Paragraph boxed style inside feature cards (optional) */
+  border: 1px solid #c5d1ff;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin-top: 0.5rem;
+  background: #e6ecff;
+  box-shadow: inset 0 0 6px rgb(64 87 255 / 0.08);
 }
 
 /* Footer */
@@ -265,9 +290,11 @@ footer a:hover {
   #hero h1 {
     font-size: 2.2rem;
   }
+  /* Hero paragraph box adjusted for small screens */
   #hero p {
     font-size: 1rem;
     margin-bottom: 2rem;
+    padding: 0.8rem 1.2rem;
   }
   .feature-list {
     flex-direction: column;
@@ -279,6 +306,14 @@ footer a:hover {
   .feature-card img {
     width: 100%;
     height: auto;
+    border-width: 1.5px;
+  }
+  .feature-card p {
+    margin-top: 0.75rem;
+  }
+  /* Bordered paragraphs adjustment */
+  #features p.intro {
+    padding: 0.8rem 1.2rem;
   }
 }
 
